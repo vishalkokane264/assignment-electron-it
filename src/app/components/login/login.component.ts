@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
 
     this.fetchAllUsersFromStore().subscribe((data: IRLoginUser[]) => {
       this.userList = data;
+      console.log(this.userList);
     });
   }
   fetchAllUsersFromStore() {
