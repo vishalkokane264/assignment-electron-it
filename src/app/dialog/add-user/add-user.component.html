@@ -1,0 +1,54 @@
+<div class="add-user">
+  <p class="title">Add New User</p>
+  <div class="form-class">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input-box">
+        <label> First Name</label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input
+            matInput
+            formControlName="first_name"
+            placeholder="Enter First Name"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <label> Last Name</label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input
+            matInput
+            formControlName="last_name"
+            placeholder="Enter Last Name"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <label> Email</label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Enter Email ID"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <label> Avatar</label>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput formControlName="avatar" placeholder="Avatar link" />
+        </mat-form-field>
+      </div>
+      <div class="button-class">
+        <button mat-flat-button color="primary" value="submit">Submit</button>
+        <!-- <button
+          mat-stroked-button
+          color="primary"
+          value="cancel"
+          (click)="onCancel()"
+        >
+          Cancel
+        </button> -->
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="login-page">
+  <div class="login-form-wrapper">
+    <div class="login-container">
+      <div>
+        <div class="login-text-wrapper"><p class="login-text">Login</p></div>
+        <div class="login-form">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="input-box">
+              <label> UserName</label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <input
+                  matInput
+                  formControlName="username"
+                  placeholder="Enter User name"
+                />
+              </mat-form-field>
+            </div>
+            <div class="input-box">
+              <label> Password</label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <input
+                  matInput
+                  [type]="showPassword ? 'text' : 'password'"
+                  formControlName="password"
+                  placeholder="Enter Password"
+                />
+                <mat-icon *ngIf="showPassword" matSuffix>{{
+                  "visibility"
+                }}</mat-icon>
+                <mat-icon *ngIf="!showPassword" matSuffix>{{
+                  "visibility_off"
+                }}</mat-icon>
+              </mat-form-field>
+            </div>
+            <div class="forget-password-wrapper">
+              <div class="remember-me">
+                <mat-checkbox color="primary"></mat-checkbox>
+                <p>Remember Me</p>
+              </div>
+              <div class="forget-password">
+                <p>Forget Password?</p>
+              </div>
+            </div>
+            <div class="button-box">
+              <!-- <avm-button label="Submit" [fullWidth]="true" ></avm-button> -->
+              <button mat-flat-button color="primary" value="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

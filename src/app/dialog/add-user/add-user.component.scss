@@ -1,0 +1,32 @@
+.add-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  .title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .form-class {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .input-box {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 16px;
+      }
+    }
+    .button-class {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

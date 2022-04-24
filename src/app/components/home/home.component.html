@@ -1,0 +1,31 @@
+<mat-drawer-container class="example-container" (click)="sideNav.toggle()">
+  <mat-drawer #sideNav mode="side" opened="true" [position]="'end'">
+    <div class="user-detail">
+      <div class="image-avatar">
+        <img [src]="userDetail.avatar" height="50px" width="50px" />
+      </div>
+      <div class="email">
+        <p>{{ userDetail.email || "xyz@gmail.com" }}</p>
+      </div>
+      <div class="username">
+        <p>
+          Hello {{ userDetail.first_name || "firstname" }}
+          {{ userDetail.last_name || "lastname" }}
+        </p>
+      </div>
+    </div>
+    <button
+      class="log-out"
+      mat-stroked-button
+      color="primary"
+      (click)="logOut()"
+      mat-button
+    >
+      Logout {{ userDetail.first_name }}
+    </button>
+  </mat-drawer>
+  <mat-drawer-content (click)="sideNav.toggle()">
+    <p class="home-page">Home page</p>
+    <p class="home-page">Content goes here</p>
+  </mat-drawer-content>
+</mat-drawer-container>

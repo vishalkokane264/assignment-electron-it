@@ -1,0 +1,107 @@
+.login-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .login-form-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    width: 50%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+    .login-container {
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: start;
+      align-items: space-between;
+      gap: 20px;
+      width: 100%;
+      height: 100%;
+      // border: 1px solid #dadce0;
+      .image-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 30px;
+        height: 70px;
+        width: 300px;
+        background-color: antiquewhite;
+      }
+      .login-text-wrapper {
+        padding: 0px 30px;
+        margin-bottom: 30px;
+        .login-text {
+          font-size: 30px;
+          font-weight: 500;
+          color: #595959;
+        }
+      }
+      .login-form {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        padding: 0px 30px;
+        width: 100%;
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .input-box {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+            .example-full-width {
+              width: 100%;
+            }
+
+            label {
+            }
+          }
+          .forget-password-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            .remember-me {
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              align-items: center;
+              gap: 5px;
+              mat-checkbox {
+              }
+            }
+          }
+          .button-box {
+            width: 100%;
+            button {
+              width: 100%;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .image-wrapper {
+    width: 50%;
+    background-color: #dadce0;
+    padding: 100px;
+  }
+}
