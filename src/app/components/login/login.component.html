@@ -24,12 +24,18 @@
                   formControlName="password"
                   placeholder="Enter Password"
                 />
-                <mat-icon *ngIf="showPassword" matSuffix>{{
-                  "visibility"
-                }}</mat-icon>
-                <mat-icon *ngIf="!showPassword" matSuffix>{{
-                  "visibility_off"
-                }}</mat-icon>
+                <mat-icon
+                  *ngIf="showPassword"
+                  matSuffix
+                  (click)="showPassword = !showPassword"
+                  >{{ "visibility" }}</mat-icon
+                >
+                <mat-icon
+                  *ngIf="!showPassword"
+                  matSuffix
+                  (click)="showPassword = !showPassword"
+                  >{{ "visibility_off" }}</mat-icon
+                >
               </mat-form-field>
             </div>
             <div class="forget-password-wrapper">

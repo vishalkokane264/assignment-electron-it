@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
         this.store.dispatch(userSlice.addUser(data.data[i]));
       }
     });
+    this.userList = [];
 
     this.fetchAllUsersFromStore().subscribe((data: IRLoginUser[]) => {
       this.userList = data;
